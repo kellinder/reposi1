@@ -31,8 +31,7 @@ logging.basicConfig(stream=log_stream, level=logging.WARNING)
 #ilsanglog.addHandler(handler)
 #####################################################
 
-if not discord.opus.is_loaded():
-	discord.opus.load_opus('opus')
+
 
 basicSetting = []
 bossData = []
@@ -838,7 +837,7 @@ async def on_ready():
 		print('< 텍스트채널 [' + client.get_channel(basicSetting[7]).name + '] 접속완료>')
 		print('< 음성채널 [' + client.get_channel(basicSetting[6]).name + '] 접속완료>')
 		if basicSetting[8] != "":
-			('< 사다리채널 [' + client.get_channel(int(basicSetting[8])).name + '] 접속완료>')
+			print('< 사다리채널 [' + client.get_channel(int(basicSetting[8])).name + '] 접속완료>')
 		if basicSetting[11] != "":
 			print('< 정산채널 [' + client.get_channel(int(basicSetting[11])).name + '] 접속완료>')
 		if int(basicSetting[13]) != 0 :
